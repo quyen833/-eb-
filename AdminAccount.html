@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lí nhân viên </title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!--fontAweSome-->
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+                <form>
+                    <legend style="font-weight: bold">Quản lý nhân viên </legend>
+                    <!--id-->
+                    <div class="form-group">
+                        <label for="">ID</label>
+                        <input type="number" required="true" class="form-control" id="ID_ID" placeholder="Enter_Id">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" required="true" class="form-control" id="Email_ID"
+                            placeholder="Enter_Email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Username</label>
+                        <input type="text" required="true" class="form-control" id="Username_ID"
+                            placeholder="Enter_Username">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Fullname</label>
+                        <input type="text" required="true" class="form-control" id="Fullname_ID"
+                            placeholder="Enter_Fullname">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="sell">Select a Department </label>
+                        <select class="form-control" id="Department_ID">
+                            <!-- <option>--Select a Department--</option>
+                            <option>Accounting</option>
+                            <option>Business Development</option>
+                            <option>Engineering</option>
+                            <option>Human Resources</option>
+                            <option>Research and Development</option> -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sell">Select a Position </label>
+                        <select class="form-control" id="Position_ID">
+                            <!-- <option>--Select a Position --</option>
+                            <option>Developer</option>
+                            <option>Tester</option>
+                            <option>Scrum Master</option>
+                            <option>PM</option> -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Cretate Date: </label>
+                        <input type="date" required="true" class="form-control" id="Cretate_Date_ID" value="">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="button" class="btn btn-success" id="save_btn" value="Save">
+                        <input type="button" class="btn btn-warning" id="update_btn" value="Update">
+                        <input type="button" class="btn btn-danger" id="reset_btn" value="Reset">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    <!-- button
+                    <button type="submit" class="btn btn-primary">Submit</button> -->
+                </form>
+            </div>
+        </div>
+
+        <!--nut saerch-->
+        <div class="row">
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <input type="text" id="input" class="form-control" placeholder="Search by Fullname or email" />
+
+                <div class="input-group">
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <input type="button" class="btn btn-success" id="reset_btn" value="Saerch" />
+            </div>
+
+
+        </div>
+
+
+    </div>
+    </div>
+    <div class="container">
+        <div class="form">
+            <h3>Thông tin nhân viên trên hệ thống</h3>
+            <table class="table table-hover" id="Detail_Staff_ID">
+                <thead>
+                    <tr>
+                        <th>
+                            ID
+                            <i class="fa fa-sort" aria-hidden="true" onclick="handleSort('id')"></i>
+                        </th>
+                        <th>
+                            Email
+                            <i class="fa fa-sort" aria-hidden="true" onclick="handleSort('id')"></i>
+                        </th>
+                        <th>
+                            Username
+                            <i class="fa fa-sort" aria-hidden="true" onclick="handleSort('id')"></i>
+                        </th>
+                        <th>
+                            Fullname
+                            <i class="fa fa-sort" aria-hidden="true" onclick="handleSort('id')"></i>
+                        </th>
+                        <th>
+                            Department
+                            <i class="fa fa-sort" aria-hidden="true" onclick="handleSort('id')"></i>
+                        </th>
+                        <th>
+                            Position
+                            <i class="fa fa-sort" aria-hidden="true" onclick="handleSort('id')"></i>
+                        </th>
+                        <th>
+                            Cretate Date
+                            <i class="fa fa-sort" aria-hidden="true" onclick="handleSort('id')"></i>
+                        </th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="Result_TB">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>quyen@gmail.com</td>
+                        <td>quyen</td>
+                        <td>phuc</td>
+                        <td>Sale</td>
+                        <td>Dev</td>
+                        <td>17-10-2021</td>
+                        <td>
+                            <button type="button" class="btn btn-warning">Edit</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-warning">Delete</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <!--phan trang-->
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <ul class="pagination" id="pagination_Id">
+                <!-- <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+<script type="text/JavaScript" src="./AdminAccount.js"></script>
+
+</html>
