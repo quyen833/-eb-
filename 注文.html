@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Order Page</title>
+    <link rel="stylesheet" type="text/css" href="css/注文.css">
+</head>
+
+<body>
+    <!-- Header Component -->
+    <div class="header-container">
+        <div class="header-title">
+            VITOR オーストラリアン イエロー オレンジ (1KG)を注文する
+        </div>
+
+        <div class="close-button" onclick="alert('Close clicked')">
+            <!-- Close icon created using two rectangles -->
+            <div class="close-icon"></div>
+            <div class="close-icon"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="content">
+            <!-- Product Info Component -->
+            <div class="product-info">
+                <div class="product-header">
+                    <img src="images/image6.jpg" alt="Product Image" class="product-image">
+                    <h2 class="product-title">
+                        ビトール オーストラリアン イエロー オレンジ (1Kg)
+                    </h2>
+                </div>
+                <div class="product-description">
+                    配達前に注文確認のお電話をさせていただきますので、
+                    正しい電話番号をご入力ください。ありがとう!
+                </div>
+            </div>
+
+            <!-- Buyer Info Component -->
+            <div class="container">
+                <h1>購入者情報</h1>
+                <!-- Gender Selection -->
+                <div class="gender-selection">
+                    <div class="gender-option">
+                        <div class="active"></div>
+                        <span>女</span>
+                    </div>
+                    <div class="gender-option">
+                        <div></div>
+                        <span>男</span>
+                    </div>
+                </div>
+
+                <!-- Name and Phone -->
+                <input type="text" placeholder="フルネーム">
+                <input type="tel" placeholder="電話番号">
+
+                <!-- Email -->
+                <input type="email" placeholder="メールアドレス（必須ではありません）">
+
+                <!-- Address -->
+                <textarea placeholder="住所" rows="2"></textarea>
+
+                <!-- Order Notes -->
+                <textarea placeholder="注文メモ（オプション）" rows="2"></textarea>
+            </div>
+        </div>
+
+        <!-- Payment Method Component -->
+        <div class="payment-container">
+            <div class="title">
+                支払方法
+            </div>
+
+            <div class="payment-options">
+                <div class="payment-option">
+                    <div class="radio-container">
+                        <input type="radio" name="payment" checked>
+                        <div class="radio-outer"></div>
+                        <div class="radio-inner"></div>
+                    </div>
+                    <span>
+                        銀行振込
+                    </span>
+                </div>
+
+                <div class="payment-option">
+                    <div class="radio-container">
+                        <input type="radio" name="payment">
+                        <div class="radio-outer"></div>
+                        <div class="radio-inner"></div>
+                    </div>
+                    <span>
+                        配達時に現金でお支払いください
+                    </span>
+                </div>
+            </div>
+
+            <div class="total">
+                合計：　　０￥
+            </div>
+        </div>
+
+        <!-- Order Button Component -->
+        <div class="order-container">
+            <button class="order-button">
+                <span class="order-text">今すぐ注文</span>
+            </button>
+            <div class="warning-messages">
+                フルネームは必須です<br>
+                電話番号は必須です<br>
+                家番号と番地名は必須です
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function () {
+                // Remove all selected indicators
+                document.querySelectorAll('.radio-inner').forEach(inner => {
+                    inner.style.background = 'transparent';
+                });
+
+                // Add selected indicator to chosen radio
+                if (this.checked) {
+                    this.nextElementSibling.nextElementSibling.style.background = '#f49c5c';
+                }
+            });
+
+            // Hover effect
+            radio.addEventListener('mouseover', function () {
+                this.nextElementSibling.style.borderColor = '#e38b4b';
+            });
+
+            radio.addEventListener('mouseout', function () {
+                this.nextElementSibling.style.borderColor = '#f49c5c';
+            });
+        });
+    </script>
+</body>
+
+</html>

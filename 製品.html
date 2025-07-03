@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="css/製品.css">
+</head>
+
+<body>
+    <header>
+        <!-- Top green bar -->
+        <div class="top-bar">
+            <div>今日、あなたの愛する人に何を贈りますか？</div>
+            <div style="display: flex; gap: 40px; align-items: center;">
+                <span>店舗住所</span>
+                <span style="color: #f5f5f5;">7:30~21:00</span>
+                <span>090.123.6789</span>
+            </div>
+        </div>
+
+        <!-- Main header content -->
+        <div class="main-header">
+            <!-- Logo -->
+            <img src="https://dashboard.codeparrot.ai/api/image/Z9-Q2f8PKu40N2Jv/rectangl.png" alt="Logo" class="logo">
+
+            <!-- Search bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="果物を探して…" class="search-input">
+                <button class="search-button"></button>
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <a href="ホームページ.html">ホームページ</a>
+                <a href="導入.html" style="color: #235c0e;">導入</a>
+                <a href="#" style="color: #f3c317;">製品</a>
+                <a href="#">ニュース</a>
+                <div class="promo">
+                    <img src="https://dashboard.codeparrot.ai/api/image/Z9-Q2f8PKu40N2Jv/rectangl-2.png"
+                        alt="Promo icon" style="width: 31px; height: 33px;">
+                    <a href="#">プロモーション</a>
+                </div>
+                <a href="注文.html">注文</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="sidebar">
+            <h2>店</h2>
+            <p>ホーム/ストア</p>
+            <h3>製品カタログ</h3>
+            <ul>
+                <li>栄養価の高い果実とドライフルーツ <span>(12)</span></li>
+                <li>フルーツバスケット <span>(42)</span></li>
+                <li>フルーツバスケット <span>(38)</span></li>
+                <li>輸入果物 <span>(62)</span></li>
+                <li>ベトナムの果物 <span>(40)</span></li>
+                <li>ギフト <span>(41)</span></li>
+                <li>輸入飲料 <span>(9)</span></li>
+                <li>輸入ケーキ <span>(1)</span></li>
+            </ul>
+            <p>価格でフィルタリングする</p>
+        </div>
+        <div class="content">
+            <div class="sort">
+                <label for="sort">並び順</label>
+                <select id="sort">
+                    <option value="popularity">人気順</option>
+                    <option value="popularity">値段順</option>
+                    <option value="popularity">おすすめ順</option>
+                    <option value="popularity">指定なし</option>
+                </select>
+            </div>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="images/image1.jpg" alt="Product 1">
+                    <p>小さなフルーツバスケットがよく売れます</p>
+                </div>
+                <div class="product">
+                    <img src="images/image2.jpg" alt="Product 2">
+                    <p>ビトールオーストラリア</p>
+                </div>
+                <div class="product">
+                    <img src="images/image3.jpg" alt="Product 3">
+                    <p>お客様にフルーツバスケットをプレゼント</p>
+                </div>
+                <div class="product">
+                    <img src="images/image4.jpg" alt="Product 4">
+                    <p>ボスのフルーツバスケット</p>
+                </div>
+                <div class="product">
+                    <img src="images/image5.jpg" alt="Product 5">
+                    <p>ハーイ</p>
+                </div>
+                <div class="product">
+                    <img src="images/image6.jpg" alt="Product 6">
+                    <p href="注文.html" style="color: #4fbf28">オレンジ</p>
+                </div>
+            </div>
+            <div class="pagination">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
