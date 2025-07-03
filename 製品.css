@@ -1,0 +1,181 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 320px;
+}
+
+header {
+    min-width: 320px;
+}
+
+.top-bar {
+    background-color: #4fbf28;
+    height: 48px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.main-header {
+    background-color: #fff;
+    height: 118px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 149px;
+    height: 100px;
+    margin-right: 52px;
+}
+
+.search-bar {
+    position: relative;
+    margin-right: 77px;
+}
+
+.search-input {
+    width: 231px;
+    height: 47px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 0 10px;
+    font-weight: 100;
+    font-size: 15px;
+    font-style: italic;
+    color: rgba(0,0,0,0.44);
+}
+
+.search-button {
+    position: absolute;
+    right: -37px;
+    top: 0;
+    width: 37px;
+    height: 46px;
+    background-color: #4fbf28;
+    border: none;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-weight: 100;
+    font-size: 24px;
+    font-style: italic;
+    color: #235c0e;
+    text-decoration: none;
+}
+
+.promo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.promo a {
+    color: #235c0e;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 20%;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar h2 {
+    color: #359e24;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.sidebar p {
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #000;
+}
+
+.sidebar ul li span {
+    color: #999;
+}
+
+.content {
+    width: 80%;
+    padding: 20px;
+}
+
+.sort {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product {
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 16px;
+    color: #000;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination span {
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
